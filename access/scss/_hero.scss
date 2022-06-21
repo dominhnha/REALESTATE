@@ -1,0 +1,126 @@
+.hero{
+    position: relative;
+    margin-bottom: 105px;
+    &-container{
+        max-width:727px;
+    }
+    & .line{
+        position: relative;
+        width: 72px;
+        border: 1px solid $while-color;
+        background-color:white;
+        display:inline-flex;
+        align-items:center;
+        top: 0;
+        transform: translateY(-4px);
+        margin-left: 2px;
+    }
+    &-img{
+        width: 100%;
+        height: 140.04vh;
+        object-fit: cover;
+    }
+    &-main{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        color: $while-color;
+    }
+    &-intro{
+        font-size:18px;
+        line-height:36px;
+        font-weight: 200;
+        color: $while-color;
+        margin-bottom: 8px;
+    }
+    &-title{
+        text-transform: uppercase;
+        line-height:90px;
+        font-family: $secondary-front;
+        margin-bottom:16px
+        
+    }
+    &-des{
+        font-size:18px;
+        line-height:36px;
+        font-weight: 200;
+        margin-bottom:32px;
+        letter-spacing: 1.5px;
+    }
+    &-Search{
+        position: absolute;
+        max-width: 1236px;
+        margin:0 auto 37px;
+        padding:0 10px;
+        width: 100%;
+        bottom:0;
+        transform: translateY(50%);
+        padding:39px 54px;
+        background-color:white;
+        border-radius:8px;
+
+        &-header{
+            color:rgba(47, 35, 79, 1);
+            font-size: 20px;
+            line-height:30px;
+            margin-bottom: 42px;
+            display:flex;
+            align-items: center;
+            & span{
+                display:block;
+                margin-right: 5px;
+            }
+            & i{
+                display:block;
+            }
+        }
+    }
+    &-Search-list{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 42px;
+        
+        background-color:white;
+        & .hero-Search-dropdown{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(208, 213, 221, 1);
+            & span{
+                display:block;
+            }
+            & i{
+                display:block;
+            }
+        }
+    }
+    @include maxW(1025px){
+        &-img{
+            height:120vh;
+        }
+        &-Search{
+            left:0;
+        }
+        &-Search-list{
+            grid-gap: 20px;
+            left: 0;
+        }
+
+    } 
+    @include maxW(736px){
+        &-Search{
+            transform: translateY(100%);
+        }
+        &-Search-list{
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    } 
+    @include maxW(376px){
+        
+
+    } 
+}

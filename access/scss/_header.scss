@@ -1,0 +1,52 @@
+@import"./base";
+.Header{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color:$dark-color;
+    &-logo{
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-main,
+    &-nav{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    &-nav{
+        list-style: none;
+    }
+    &-link{
+        display:block;
+        text-decoration:none;
+        padding: 26px 20px;
+        color: $while-color;
+        &:hover{
+            transition: all 0.5s ease;
+            opacity: 0.1;
+        }
+    }
+    &-mobile{
+        display:none;
+        font-size:30px;
+        padding:0 10px;
+        color: $while-color;
+
+
+    }
+    @include maxW(736px){
+        &-mobile{
+            display:block;
+        }
+        &-nav{
+            display:none;
+        }
+
+    }   
+}
